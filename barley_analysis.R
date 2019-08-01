@@ -154,9 +154,9 @@ barleygraphic2 <- byyear_barley_supplydiss %>%
 write_csv(barleygraphic2, "barleygraphic2.csv")
 
 graphic3 <- byyear_barley_supplydiss %>% 
-  select(year, total_supply, food_alcohol_and_industrial_use, feed_and_residual_use) %>% 
-  mutate(percent_food_alcohol_industrial = (food_alcohol_and_industrial_use/total_supply)*100) %>% 
-  mutate(percent_feed = (feed_and_residual_use/total_supply)*100)
+  select(year, total_disappearance, food_alcohol_and_industrial_use, feed_and_residual_use) %>% 
+  mutate(percent_food_alcohol_industrial = (food_alcohol_and_industrial_use/total_disappearance)*100) %>% 
+  mutate(percent_feed = (feed_and_residual_use/total_disappearance)*100)
 
 graphic3 %>% 
   ggplot()+
